@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FIRM, NAV_LINKS } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -69,6 +70,7 @@ export default function NavBar() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contact"
+            onClick={() => trackEvent("click_cta", "Navigation", "Book Consultation")}
             className="gold-gradient text-[#1A1200] px-6 py-2.5 rounded-lg text-sm font-bold shadow-sm hover:opacity-90 transition-opacity"
           >
             Book Consultation

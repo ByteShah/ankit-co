@@ -5,6 +5,10 @@ import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/ui/CookieBanner";
 import JsonLd from "@/components/ui/JsonLd";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import MobileStickyBar from "@/components/ui/MobileStickyBar";
+import LeadMagnetPopup from "@/components/ui/LeadMagnetPopup";
+import Clarity from "@/components/ui/Clarity";
 import { FIRM } from "@/lib/constants";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ankitshahco.com";
@@ -77,12 +81,17 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body className="min-h-full flex flex-col bg-[#FAFAF8] text-[#1A1C19] antialiased">
+        <Clarity />
         <NavBar />
-        <main className="flex-1">
+        {/* pb-[68px] on mobile to avoid content hidden behind sticky bar */}
+        <main className="flex-1 pb-[68px] md:pb-0">
           {children}
         </main>
         <Footer />
         <CookieBanner />
+        <WhatsAppFloat />
+        <MobileStickyBar />
+        <LeadMagnetPopup />
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { ARTICLES } from "@/lib/articles";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ankitshahco.com";
 
@@ -12,10 +13,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/contact",    priority: 0.9,  changeFrequency: "monthly" as const },
   ];
 
-  return routes.map(({ path, priority, changeFrequency }) => ({
-    url: `${BASE_URL}${path}`,
+  const articleRoutes = ARTICLES.map((a) => ({
+    url: `${BASE_URL}/resources/${a.slug}`,
     lastModified: new Date(),
-    changeFrequency,
-    priority,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
   }));
+
+  return [
+    ...routes.map(({ path, priority, changeFrequency }) => ({
+      url: `${BASE_URL}${path}`,
+      lastModified: new Date(),
+      changeFrequency,
+      priority,
+    })),
+    ...articleRoutes,
+  ];
 }

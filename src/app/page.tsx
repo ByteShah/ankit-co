@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FIRM, SERVICES } from "@/lib/constants";
 import NewsletterForm from "@/components/ui/NewsletterForm";
+import HeroCTA from "@/components/ui/HeroCTA";
 
 // ── Stat pill for hero ────────────────────────────────────────────────────────
 function StatPill({ value, label }: { value: string; label: string }) {
@@ -52,20 +53,7 @@ export default function HomePage() {
               startups. We don&apos;t just balance books — we build financial
               legacies through integrity and insight.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="gold-gradient text-[#1A1200] px-8 py-4 rounded-lg text-base font-bold shadow-md hover:opacity-90 transition-opacity text-center"
-              >
-                Get a Free Consultation
-              </Link>
-              <Link
-                href="/services"
-                className="border border-[rgba(10,22,40,0.2)] text-[#0A1628] px-8 py-4 rounded-lg text-base font-bold hover:bg-[#F2F1EE] transition-colors text-center"
-              >
-                Our Services
-              </Link>
-            </div>
+            <HeroCTA />
 
             {/* Trust row */}
             <div className="mt-12 flex items-center gap-6 flex-wrap">

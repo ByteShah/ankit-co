@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SERVICES, FORMSPREE_ENDPOINT } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -23,7 +24,12 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(form),
       });
-      setStatus(res.ok ? "success" : "error");
+      if (res.ok) {
+        setStatus("success");
+        trackEvent("form_submit", "Contact", "Enquiry Form");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }

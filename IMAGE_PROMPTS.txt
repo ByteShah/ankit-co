@@ -1,0 +1,456 @@
+================================================================================
+  ANKIT SHAH & CO. LLP — IMAGE GENERATION PROMPTS
+  Brand: Deep navy (#0A1628) + gold (#C9A84C) | Premium CA Firm | Mumbai, India
+  Use these prompts with: Midjourney, DALL-E 3, Firefly, or Stable Diffusion XL
+================================================================================
+
+DESIGN BRIEF (read before generating any image)
+-------------------------------------------------
+Firm:     Ankit Shah & Co. LLP — Chartered Accountants
+Founded:  2005 | Mumbai, India
+Clients:  Startups, MSMEs, growing enterprises, 500+ clients, 8+ industries
+Tone:     Premium, trustworthy, precise, sophisticated, modern Indian CA firm
+Palette:  Deep navy #0A1628, gold #C9A84C, warm beige #ECEAE6, white #FFFFFF
+Style:    Clean corporate photography or high-quality 3D illustration. Never
+          stock-photo-cheesy. Think McKinsey / Big 4 aesthetic.
+
+================================================================================
+  SECTION 1 — HOME PAGE
+  File: src/app/page.tsx
+================================================================================
+
+--------------------------------------------------------------------------------
+IMAGE 1: Home Hero — Right Card (Main visual focal point of entire site)
+  File:         public/images/home-hero.jpg
+  Dimensions:   800×1000px (4:5 portrait)
+  Used at:      page.tsx ~line 83-115
+  Overlaid by:  Gold ring decorations, card shadow, no text overlay
+--------------------------------------------------------------------------------
+
+PROMPT (Photography style):
+A distinguished Indian male Chartered Accountant in his early 40s, sharp
+professional in a well-fitted dark navy suit with subtle gold tie pin, seated
+confidently at a premium dark walnut desk. Warm directional studio lighting
+from the left creates strong depth. Background is a blurred modern Mumbai
+office interior — floor-to-ceiling glass windows, city skyline visible at dusk
+with ambient city lights. He holds a slim leather-bound planner, posture upright
+and composed. Expression: calm authority, warmth, and competence. Camera:
+50mm portrait lens, shallow depth of field, sharp on face and lapel. Color
+grade: deep navy shadows, warm gold highlights, rich skin tones. No generic
+smiles — dignified professional expression. Aspect ratio 4:5.
+
+ALTERNATE PROMPT (3D / Illustration style):
+Isometric 3D illustration of a sleek corporate office desk scene. A navy-blue
+desk with gold-accented stationery — fountain pen, legal documents, a sleek
+laptop with financial charts, a small brass scale of justice, a CA seal stamp.
+Lighting: dramatic single-source warm light from upper-left, long shadows.
+Color palette: deep navy #0A1628 background, gold #C9A84C accents, white paper
+documents. Style: Behance-worthy 3D render, ultra-clean, no clutter. 4:5
+portrait crop. Used for luxury professional services firm branding.
+
+--------------------------------------------------------------------------------
+IMAGE 2: Home — "Why Choose Us" Section (Left visual with stats overlay)
+  File:         public/images/home-why-choose.jpg
+  Dimensions:   1200×800px (3:2 landscape)
+  Used at:      page.tsx ~line 179-198
+  Overlaid by:  Dark navy gradient left-to-right, stat counters on top
+--------------------------------------------------------------------------------
+
+PROMPT:
+A wide-angle interior photograph of a premium Indian boardroom meeting. Four
+professionals around a glass conference table — mix of formal attire, one
+woman in a sari-blouse, two men in suits. They study documents and a large
+monitor showing financial data dashboards. The room has floor-to-ceiling
+windows with a soft Mumbai skyline in the background, natural daylight
+flooding in. Mood: collaborative, purposeful, expert. Color grade: navy-tinted
+shadows on the right (to accommodate gradient overlay on the left), warm skin
+tones, neutral grays. No laptops with visible logos. Ultra-sharp, editorial
+photography quality. Landscape 3:2 ratio. Shot on Canon R5, 24mm wide lens.
+
+--------------------------------------------------------------------------------
+IMAGE 3: Home — Featured Knowledge Hub Card (Featured article hero image)
+  File:         public/images/home-featured-article.jpg
+  Dimensions:   1400×700px (2:1 landscape — wide banner)
+  Used at:      page.tsx ~line 277-301
+  Overlaid by:  Strong dark navy gradient overlay from bottom, text on top
+--------------------------------------------------------------------------------
+
+PROMPT:
+Aerial flat-lay photograph on a dark walnut desk surface: an open financial
+report with graphs and charts, a gold-capped fountain pen, reading glasses,
+a cup of black coffee in a white porcelain cup with saucer, scattered loose
+printed pages showing tax calculations and compliance checklists, a small
+Indian flag pin, a Ganesh brass idol (small, corner accent). Crisp overhead
+shot, dramatic single-light source from upper-left, deep shadows. Color grade:
+warm amber tones, dark navy-leaning shadows (image should survive a dark
+overlay on top). Resolution: ultra-high. 2:1 landscape banner crop.
+
+================================================================================
+  SECTION 2 — ABOUT PAGE
+  File: src/app/about/page.tsx
+================================================================================
+
+--------------------------------------------------------------------------------
+IMAGE 4: About — Hero Partner Card (CA Ankit Shah headshot — MOST IMPORTANT)
+  File:         public/images/ankit-shah-portrait.jpg
+  Dimensions:   600×800px (3:4 portrait)
+  Used at:      about/page.tsx ~line 60-70
+  Overlaid by:  Gold ring decorations, hover rotate effect, name badge below
+--------------------------------------------------------------------------------
+
+PROMPT (if using AI-generated avatar / no real photo):
+A photorealistic portrait of a distinguished Indian Chartered Accountant, male,
+early-to-mid 40s, warm brown complexion, sharp jawline, intelligent eyes,
+clean-shaved with neatly groomed short black hair with slight greying at
+temples (conveys experience). Wearing a premium dark navy suit, white
+button-down shirt, subtle gold tie with micro-pattern. Background: blurred
+premium office bookshelf lined with law and accounting volumes, warm ambient
+light. Lighting: Rembrandt lighting setup — main light from upper-left,
+catch light in eyes. Expression: composed confidence, subtle approachable
+warmth — NOT a generic stock smile. Camera simulation: Sony A7R IV, 85mm
+f/1.4, sharp on eyes and lapel, bokeh background. Skin texture and fabric
+texture must be photorealistic. 3:4 portrait crop. This is the face of a
+trusted CA firm in Mumbai.
+
+NOTE: Replace with actual photo of CA Ankit Shah as soon as available.
+This is the highest-priority image on the site.
+
+--------------------------------------------------------------------------------
+IMAGE 5: About — Culture Section Card 1 (Team collaboration)
+  File:         public/images/about-culture-team.jpg
+  Dimensions:   800×533px (3:2 landscape)
+  Used at:      about/page.tsx ~line 240-246
+  Overlaid by:  Subtle dark gradient, no text overlay
+--------------------------------------------------------------------------------
+
+PROMPT:
+Candid documentary-style photograph inside a modern Mumbai CA office. Two
+professionals — one male, one female — leaning over a shared desk reviewing
+printed audit reports together. Both in business formal, focused expressions,
+pointing to specific figures on a document. The space has warm overhead
+lighting, a visible whiteboard with financial flowchart in background, plants,
+and a window with diffused daylight. Mood: genuine collaboration, intellectual
+engagement, trust between colleagues. Color grade: warm corporate tones, no
+harsh flash. Shallow depth of field, sharp on the documents and faces. 3:2
+landscape. Shot style: editorial documentary, Financial Times or Bloomberg
+Businessweek quality.
+
+--------------------------------------------------------------------------------
+IMAGE 6: About — Culture Section Card 2 (Team / office environment)
+  File:         public/images/about-culture-office.jpg
+  Dimensions:   800×533px (3:2 landscape)
+  Used at:      about/page.tsx ~line 244-246
+  Overlaid by:  Beige (#ECEAE6) tint, no text overlay
+--------------------------------------------------------------------------------
+
+PROMPT:
+Wide-angle interior photograph of a contemporary Indian CA firm office. Open
+plan workspace with 4-5 professionals at individual desks, multiple monitors
+showing spreadsheets and compliance dashboards. Clean, organized space — no
+clutter. Warm wood tones for desks, white walls, subtle geometric art panels.
+Plants and natural light from windows. Tone: energetic yet focused, a place
+of precision and care. The photograph should feel authentic and aspirational,
+not staged. Color grade: warm neutrals, beige-tinted light. 3:2 landscape.
+Photography quality: architectural + people photography hybrid, professional
+commercial grade.
+
+================================================================================
+  SECTION 3 — SERVICES PAGE
+  File: src/app/services/page.tsx
+================================================================================
+
+--------------------------------------------------------------------------------
+IMAGE 7: Services — Hero Card (Right visual)
+  File:         public/images/services-hero.jpg
+  Dimensions:   800×1000px (4:5 portrait)
+  Used at:      services/page.tsx ~line 74-89
+  Overlaid by:  Gold ring decorations, card shadow
+--------------------------------------------------------------------------------
+
+PROMPT:
+Dramatic studio-lit photograph of professional legal and financial instruments
+on a deep navy surface. Composition: a balanced scale of justice (brass/gold),
+a thick hardbound company law volume (dark cover), a gold fountain pen, a
+stamped official document with a red seal, and a calculator — all arranged
+in a deliberate, magazine-worthy layout. Lighting: single dramatic overhead
+spot light, creating strong directional shadows and gold reflections. Color
+palette must stay within deep navy, gold, and white tones. Ultra-sharp, no
+shallow DOF — everything in focus. Shot overhead at 45-degree angle.
+Aspect ratio 4:5 portrait. Commercial product photography quality.
+
+ALTERNATE (3D illustration):
+A tall 3D isometric illustration in portrait orientation. A layered tower of
+services visualized as stacked premium cards: bottom layer — audit papers and
+magnifying glass; middle — tax forms with ₹ symbols in gold; top — growth
+chart with upward arrow. Deep navy background, gold and white elements. Each
+layer connected by floating golden connectors. Ultra-clean Behance 3D render.
+4:5 portrait format.
+
+--------------------------------------------------------------------------------
+IMAGE 8: Services Deep-Dive — AUDIT & ASSURANCE
+  File:         public/images/service-audit.jpg
+  Dimensions:   1200×900px (4:3 landscape)
+  Used at:      services/page.tsx ~line 212-227 (first service card)
+  Overlaid by:  None — image is the sole visual
+--------------------------------------------------------------------------------
+
+PROMPT:
+Close-up editorial photograph of an audit in progress. A professional's hands
+(formal cufflinks visible) flipping through a thick company annual report,
+with a red pen marking a specific line item. On the desk beside them: a
+magnifying glass resting on a spreadsheet, a small brass stamp (CA seal),
+reading glasses, and a steaming cup of chai in a glass. Natural window light
+from the side, creating texture on the paper. Color grade: warm professional,
+cream and gold paper tones, navy suit sleeve visible. 4:3 landscape. Macro +
+medium shot composition. Quality: Big 4 accounting firm marketing photography.
+
+--------------------------------------------------------------------------------
+IMAGE 9: Services Deep-Dive — TAX ADVISORY
+  File:         public/images/service-tax.jpg
+  Dimensions:   1200×900px (4:3 landscape)
+  Used at:      services/page.tsx ~line 212-227 (second service card)
+  Overlaid by:  None — image is the sole visual
+--------------------------------------------------------------------------------
+
+PROMPT:
+Artistic flat-lay photograph on a white marble surface. Key elements:
+an Income Tax Return form (Indian ITR form visible), a GST invoice printout,
+a smartphone showing a tax calculator app, a gold coin stack, a small
+miniature of Indian Parliament building or ₹ symbol paperweight, and a green
+plant sprig (symbolizing growth). Composition is deliberate, architectural —
+objects arranged with mathematical precision and breathing room. Lighting:
+soft diffused overhead with one directional accent. Color grade: clean white
+and gold tones, warm overall. 4:3 landscape. Commercial photography,
+magazine editorial quality.
+
+--------------------------------------------------------------------------------
+IMAGE 10: Services Deep-Dive — CORPORATE FINANCE & VALUATION
+  File:         public/images/service-corporate-finance.jpg
+  Dimensions:   1200×900px (4:3 landscape)
+  Used at:      services/page.tsx ~line 212-227 (third service card)
+  Overlaid by:  None — image is the sole visual
+--------------------------------------------------------------------------------
+
+PROMPT:
+Dynamic editorial photograph: a large monitor on a trading/finance workstation
+showing multiple financial charts — a rising bar chart (M&A deal funnel), a
+DCF valuation model in Excel, and a blue-chip stock performance graph. A
+professional's hand holds a gold pen, circling a key valuation figure. The
+background has a second blurred monitor with Bloomberg Terminal-style data.
+Desk: premium, dark, minimal. Lighting: monitor glow as primary light source,
+cool blue-white, with warm desk lamp accent. Mood: high-stakes precision,
+controlled urgency. Color grade: dark, moody, financial. 4:3 landscape.
+
+ALTERNATE (clean illustration):
+A premium 3D illustration: an ascending bar chart made of gold coins, beside
+a large upward-trending line graph on a dark navy panel. Corporate deal
+icons — handshake silhouette, briefcase, rupee symbol — float around the
+chart. Style: modern infographic illustration, crisp, dark navy + gold palette.
+4:3 landscape.
+
+--------------------------------------------------------------------------------
+IMAGE 11: Services Deep-Dive — RISK & COMPLIANCE
+  File:         public/images/service-risk.jpg
+  Dimensions:   1200×900px (4:3 landscape)
+  Used at:      services/page.tsx ~line 212-227 (fourth service card)
+  Overlaid by:  None — image is the sole visual
+--------------------------------------------------------------------------------
+
+PROMPT:
+Conceptual editorial photograph. Center of frame: a close-up of a thick
+regulatory compliance binder open to a page showing SEBI/RBI regulation
+paragraphs, with yellow sticky tabs. A professional's hand uses a highlighter
+on a critical clause. Surrounding context: a chess king piece (risk strategy
+metaphor), a padlock (security/protection), and a printed risk matrix with
+red/amber/green cells visible. Background: blurred dark navy office. Lighting:
+dramatic spotlight from upper-right, hard shadows. Color grade: dark,
+authoritative, gold and red accents. 4:3 landscape. Conceptual commercial
+photography, Economist magazine cover quality.
+
+--------------------------------------------------------------------------------
+IMAGE 12: Services Deep-Dive — SECRETARIAL & COMPLIANCE
+  File:         public/images/service-secretarial.jpg
+  Dimensions:   1200×900px (4:3 landscape)
+  Used at:      services/page.tsx ~line 212-227 (fifth service card)
+  Overlaid by:  None — image is the sole visual
+--------------------------------------------------------------------------------
+
+PROMPT:
+Elegant editorial photograph. A premium leather-bound company register /
+minute book open on a polished dark wood table. Visible: crisp typed meeting
+minutes, a fountain pen resting on the page (gold nib), a corporate seal
+stamp to the side, a stack of official incorporation documents with an MCA
+filing printout on top, and a small brass company name plate. Warm studio
+lighting from the left, creating soft shadows on paper texture. Color grade:
+warm neutrals, cream paper, gold and navy accents. Very clean, classic.
+4:3 landscape. Quality: luxury legal firm branding photography.
+
+================================================================================
+  SECTION 4 — RESOURCES PAGE
+  File: src/app/resources/ResourcesClient.tsx
+================================================================================
+
+--------------------------------------------------------------------------------
+IMAGE 13: Resources — Hero Card (Knowledge hub visual)
+  File:         public/images/resources-hero.jpg
+  Dimensions:   800×1000px (4:5 portrait)
+  Used at:      ResourcesClient.tsx ~line 149-155
+  Overlaid by:  Gold ring decorations, text badge "Updated Regularly"
+--------------------------------------------------------------------------------
+
+PROMPT:
+Beautifully composed vertical photograph of a curated professional reading
+corner. A dark navy hardback book lies open, pages fanned out toward camera,
+revealing dense text and a small hand-drawn diagram. Stacked beside it: three
+more books — spines showing titles like "Companies Act", "Direct Tax Laws",
+"FEMA Regulations" (or similar legal/financial titles). A warm reading lamp
+casts a cone of golden light. A brass bookmark and a folded newspaper (pink
+Financial Times-style paper) add texture. Background: dark, blurred bookshelf.
+Color grade: warm amber book spines, deep navy shadows, gold lamp glow.
+4:5 portrait. Editorial lifestyle + object photography.
+
+--------------------------------------------------------------------------------
+IMAGE 14: Resources — Featured Article Card (Wide hero banner)
+  File:         public/images/resources-featured-article.jpg
+  Dimensions:   1400×700px (2:1 landscape banner)
+  Used at:      ResourcesClient.tsx ~line 201-225
+  Overlaid by:  Strong dark navy gradient from bottom, article title on top
+--------------------------------------------------------------------------------
+
+PROMPT:
+Wide flat-lay aerial photograph on a dark slate / navy surface. Subject:
+a printed article spread titled "Budget 2025 — Key Changes for SMEs" (or
+any generic financial headline), highlighted and annotated in gold pen. Nearby:
+a compact calculator showing a large rupee total, a small Indian currency
+note (₹500), printed GST notices, and a tiny brass Ganesha idol (corner
+accent, prosperity symbol). One professional hand enters the frame from the
+right, holding a gold pen mid-annotation. Lighting: overhead single-source
+with strong directional shadows. Color grade: very dark — designed to sit
+behind a strong dark overlay while still showing texture and depth. 2:1 wide
+banner crop.
+
+================================================================================
+  SECTION 5 — INDUSTRIES PAGE (optional / low priority)
+  File: src/app/industries/page.tsx
+================================================================================
+
+--------------------------------------------------------------------------------
+IMAGE 15: Industries — Hero Decorative Orb (small, mostly decorative)
+  File:         public/images/industries-hero-orb.png (transparent PNG)
+  Dimensions:   200×200px (1:1 circle, PNG with transparency)
+  Used at:      industries/page.tsx ~line 56-58
+  Overlaid by:  Gold gradient circle frame, mostly decorative
+  Priority:     LOW — current gold gradient orb works fine as-is
+--------------------------------------------------------------------------------
+
+PROMPT (only if replacing the CSS gradient orb):
+A perfectly circular icon illustration on transparent background. Design:
+a stylized cityscape silhouette representing multiple Indian industries —
+a factory chimney (manufacturing), a building with medical cross (healthcare),
+a shopping bag (retail/FMCG), a circuit board corner (technology), all
+arranged harmoniously within a circle. Color: white line-art on transparent
+background (will sit on a gold gradient circle). Style: clean vector icon,
+single color white. 200×200px PNG with transparency, circular crop.
+
+================================================================================
+  SECTION 6 — CONTACT PAGE (special case — needs embed, not image)
+  File: src/app/contact/page.tsx
+================================================================================
+
+--------------------------------------------------------------------------------
+MAP PLACEHOLDER (not an image — needs Google Maps embed)
+  File:         N/A — replace placeholder with actual embed
+  Used at:      contact/page.tsx ~line 187-199
+  Code comment: "Replace with real Google Maps embed once address is confirmed"
+--------------------------------------------------------------------------------
+
+ACTION REQUIRED (not a prompt — a code task):
+1. Obtain the firm's confirmed Mumbai office address
+2. Go to maps.google.com → navigate to address → Share → Embed a map
+3. Copy the <iframe> embed code
+4. Replace the placeholder div in contact/page.tsx lines 187-199 with:
+
+   <iframe
+     src="https://www.google.com/maps/embed?pb=..."
+     width="100%"
+     height="300"
+     style={{ border: 0 }}
+     allowFullScreen
+     loading="lazy"
+     referrerPolicy="no-referrer-when-downgrade"
+     title="Ankit Shah & Co. LLP Office Location"
+   />
+
+PLACEHOLDER IMAGE (if maps embed not ready):
+A realistic-looking static map tile of South Mumbai / Nariman Point area,
+showing streets, labeled landmarks (NCPA, Mantralaya, CSMT), and a prominent
+gold pin marker. Clean cartography style, muted navy and beige map colors
+consistent with brand. 3:2 landscape, 900×600px.
+
+================================================================================
+  QUICK-START GUIDE — HOW TO USE THESE PROMPTS
+================================================================================
+
+RECOMMENDED TOOLS:
+  1. Midjourney v6      — Best photorealism and composition control
+                          Add "--ar 4:5" or "--ar 3:2" for aspect ratio
+                          Add "--style raw" for less AI-look
+                          Add "--q 2" for maximum quality
+
+  2. Adobe Firefly 3    — Best for commercial use (stock-safe, no copyright
+                          issues). Use "Generative Fill" for variations.
+
+  3. DALL-E 3           — Good for illustration-style prompts (images 7alt,
+                          10alt, 15). Use via ChatGPT or API.
+
+  4. Stable Diffusion XL — Best for full control. Use with
+                           DreamShaper XL or RealVisXL checkpoint.
+
+ADDING BRAND CONSISTENCY:
+  Append this to EVERY prompt for consistent brand feel:
+  "Color grade: deep navy shadows (#0A1628), gold highlights (#C9A84C),
+   premium professional Indian corporate aesthetic, ultra-high resolution,
+   commercial photography quality, not stock photo, not generic."
+
+PRIORITY ORDER FOR GENERATION:
+  1. IMAGE 4  — Ankit Shah portrait (most important, face of the brand)
+  2. IMAGE 1  — Home Hero (first thing visitors see)
+  3. IMAGE 7  — Services Hero
+  4. IMAGE 13 — Resources Hero
+  5. IMAGE 2  — Why Choose Us section
+  6. IMAGES 8-12 — Service deep-dives (all equal priority)
+  7. IMAGES 3, 14 — Featured article banners
+  8. IMAGES 5, 6 — About culture cards
+  9. IMAGE 15 — Industries orb (optional, current CSS works fine)
+
+FILE PLACEMENT:
+  Create folder: /public/images/
+  Save each file exactly as named in the "File:" field above.
+  Recommended formats:
+    - Photos:        .jpg, quality 85-90, progressive encoding
+    - Illustrations: .png or .webp
+    - Map:           embed (no file needed)
+
+NEXT.JS IMPLEMENTATION NOTE:
+  After adding images, replace the gradient placeholder divs with:
+
+  import Image from 'next/image'
+
+  <div className="relative">
+    <Image
+      src="/images/home-hero.jpg"
+      alt="CA Ankit Shah, Partner at Ankit Shah & Co. LLP"
+      width={800}
+      height={1000}
+      className="w-full h-full object-cover rounded-2xl"
+      priority  {/* add this only for above-the-fold images */}
+    />
+  </div>
+
+================================================================================
+  END OF IMAGE PROMPTS
+  Total image slots:  15 (14 image files + 1 map embed)
+  High priority:       9
+  Medium priority:     4
+  Low/optional:        2
+================================================================================

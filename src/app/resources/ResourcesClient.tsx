@@ -3,90 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import NewsletterForm from "@/components/ui/NewsletterForm";
-
-// ── Article data ──────────────────────────────────────────────────────────────
-const ARTICLES = [
-  {
-    tag: "Tax Update",
-    tagColor: "gold" as const,
-    title: "Union Budget 2025: Key Tax Changes Every Business Must Know",
-    desc: "A comprehensive analysis of direct and indirect tax amendments — capital gains, income slabs, and GST rate changes impacting Indian businesses.",
-    date: "February 2025",
-    readTime: "8 min read",
-    category: "Tax",
-    featured: true,
-  },
-  {
-    tag: "GST Advisory",
-    tagColor: "navy" as const,
-    title: "GST Amnesty Scheme 2024: Deadline & Eligibility Guide",
-    desc: "All you need to know about who qualifies, how to apply, and what penalties are waived under the GST Amnesty Scheme.",
-    date: "December 2024",
-    readTime: "5 min read",
-    category: "GST",
-    featured: false,
-  },
-  {
-    tag: "Startup Advisory",
-    tagColor: "navy" as const,
-    title: "ESOP Structuring for Startups: A Tax-Efficient Framework",
-    desc: "How to design an ESOP plan that motivates your team while minimising perquisite tax liability — with real valuation examples.",
-    date: "November 2024",
-    readTime: "6 min read",
-    category: "Startup",
-    featured: false,
-  },
-  {
-    tag: "Compliance",
-    tagColor: "navy" as const,
-    title: "FEMA Compliance Checklist for Companies with Foreign Investment",
-    desc: "A step-by-step checklist for companies receiving FDI — reporting requirements, RBI filings, and common pitfalls to avoid.",
-    date: "October 2024",
-    readTime: "7 min read",
-    category: "Compliance",
-    featured: false,
-  },
-  {
-    tag: "Tax Update",
-    tagColor: "gold" as const,
-    title: "Section 43B(h) — MSME Payment Rule: Impact on Buyers & Sellers",
-    desc: "The new provision disallowing deductions for delayed MSME payments — practical implications and how to stay compliant.",
-    date: "September 2024",
-    readTime: "5 min read",
-    category: "Tax",
-    featured: false,
-  },
-  {
-    tag: "Finance",
-    tagColor: "navy" as const,
-    title: "Business Valuation Methods: Which One Is Right for Your Deal?",
-    desc: "DCF, comparable company analysis, or asset-based valuation — understanding the right method for M&A, fundraising, and ESOP purposes.",
-    date: "August 2024",
-    readTime: "9 min read",
-    category: "Finance",
-    featured: false,
-  },
-  {
-    tag: "GST Advisory",
-    tagColor: "navy" as const,
-    title: "E-Invoicing Under GST: Mandatory Thresholds & Common Errors",
-    desc: "The latest e-invoicing mandates, applicable turnover thresholds, and the most frequent errors that trigger scrutiny.",
-    date: "July 2024",
-    readTime: "4 min read",
-    category: "GST",
-    featured: false,
-  },
-  {
-    tag: "Compliance",
-    tagColor: "navy" as const,
-    title: "Annual Compliance Calendar for Indian Companies (FY 2024-25)",
-    desc: "A month-by-month compliance calendar covering ROC filings, GST returns, TDS deadlines, and income tax due dates.",
-    date: "April 2024",
-    readTime: "3 min read",
-    category: "Compliance",
-    featured: false,
-  },
-];
+import { ARTICLES } from "@/lib/articles";
 
 const TOOLS = [
   { icon: "calculate",              title: "Income Tax Calculator (FY 2024-25)", desc: "Compare old vs. new tax regime with real-time computation." },
@@ -105,10 +22,10 @@ const FILTERS = ["All", "Tax", "GST", "Compliance", "Startup", "Finance"] as con
 type Filter = (typeof FILTERS)[number];
 
 const NEWS = [
-  { date: "Mar 2025", headline: "CBDT issues clarification on new TDS provisions under Finance Bill 2025" },
-  { date: "Feb 2025", headline: "Union Budget 2025 highlights — tax slabs revised, capital gains reformed" },
-  { date: "Jan 2025", headline: "GST Council 55th meeting: rate rationalisations and sector exemptions announced" },
-  { date: "Dec 2024", headline: "MCA introduces revised LLP amendment rules for compliance simplification" },
+  { date: "Mar 2025", headline: "CBDT issues clarification on new TDS provisions under Finance Bill 2025", href: "https://www.incometax.gov.in/iec/foportal/help/whats-new" },
+  { date: "Feb 2025", headline: "Union Budget 2025 highlights — tax slabs revised, capital gains reformed", href: "https://indiabudget.gov.in" },
+  { date: "Jan 2025", headline: "GST Council 55th meeting: rate rationalisations and sector exemptions announced", href: "https://www.gstcouncil.gov.in/gst-council-meetings" },
+  { date: "Dec 2024", headline: "MCA introduces revised LLP amendment rules for compliance simplification", href: "https://www.mca.gov.in/content/mca/global/en/mca/llp.html" },
 ];
 
 export default function ResourcesClient() {
@@ -213,13 +130,13 @@ export default function ResourcesClient() {
                 <p className="text-white/65 text-sm leading-relaxed mb-6 max-w-xl">{featured.desc}</p>
                 <div className="flex items-center gap-6">
                   <span className="text-white/50 text-xs">{featured.date} · {featured.readTime}</span>
-                  <a
-                    href="#"
+                  <Link
+                    href={`/resources/${featured.slug}`}
                     className="inline-flex items-center gap-2 text-[#C9A84C] font-bold text-sm group-hover:gap-3 transition-all"
                   >
                     Read Full Article
-                    <span className="material-symbols-outlined text-sm">open_in_new</span>
-                  </a>
+                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -228,9 +145,9 @@ export default function ResourcesClient() {
             {rest.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {rest.map((article) => (
-                  <a
+                  <Link
                     key={article.title}
-                    href="#"
+                    href={`/resources/${article.slug}`}
                     className={`bg-white p-7 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all flex flex-col border-l-4 ${
                       article.tagColor === "gold"
                         ? "border-[#C9A84C]"
@@ -248,7 +165,7 @@ export default function ResourcesClient() {
                       <span className="text-xs text-[#41474F]/60">{article.date} · {article.readTime}</span>
                       <span className="material-symbols-outlined text-[#C9A84C] text-lg">arrow_forward</span>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -276,10 +193,12 @@ export default function ResourcesClient() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {NEWS.map(({ date, headline }) => (
+            {NEWS.map(({ date, headline, href }) => (
               <a
                 key={headline}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white p-6 rounded-xl shadow-sm hover:-translate-y-1 transition-transform group"
               >
                 <span className="text-[10px] font-bold text-[#41474F]/50 uppercase tracking-widest">{date}</span>
