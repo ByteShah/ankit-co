@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { FIRM } from "@/lib/constants";
 import ContactForm from "./ContactForm";
+import PageBanner from "@/components/ui/PageBanner";
 
 export const metadata: Metadata = {
   alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ankitshahco.com'}/contact` },
@@ -30,32 +31,17 @@ const FAQS = [
 export default function ContactPage() {
   return (
     <>
-      {/* ════════════════════════════════════════════════════════════
-          HERO
-      ════════════════════════════════════════════════════════════ */}
-      <section className="pt-32 pb-12 bg-[#FAFAF8]">
-        <div className="max-w-screen-xl mx-auto px-6 md:px-10">
-          <div className="max-w-2xl">
-            <span className="inline-block px-3 py-1.5 bg-[#C9A84C]/10 text-[#A07C28] text-[10px] font-bold tracking-widest uppercase rounded-full mb-6">
-              Connect With Us
-            </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#0A1628] leading-[1.05] mb-5">
-              Precision Meets
-              <br />
-              <span className="text-gold-gradient">Partnership.</span>
-            </h1>
-            <p className="text-[#41474F] text-lg max-w-lg leading-relaxed">
-              Reach out to discuss your requirements. A senior advisor will
-              personally respond within 24 hours.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        breadcrumb="Contact"
+        title="Contact Us"
+        subtitle="Reach out to discuss your requirements. A senior advisor will personally respond within one working day."
+        image="/images/contact.jpg"
+      />
 
       {/* ════════════════════════════════════════════════════════════
           MAIN SPLIT LAYOUT
       ════════════════════════════════════════════════════════════ */}
-      <section className="pb-24 bg-[#FAFAF8]">
+      <section className="pt-12 md:pt-16 pb-24 bg-[#F7F9FC]">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
@@ -63,16 +49,16 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-8">
 
               {/* Firm info card */}
-              <div className="navy-gradient rounded-2xl p-8 text-white relative overflow-hidden">
-                <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-[#C9A84C]/10 blur-2xl pointer-events-none" />
+              <div className="blue-gradient rounded-2xl p-8 text-white relative overflow-hidden">
+                <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-[#2563B0]/10 blur-2xl pointer-events-none" />
                 <div className="relative z-10">
-                  <p className="text-[#C9A84C] text-xs font-bold uppercase tracking-widest mb-5">
-                    Ankit Shah & Co. LLP
+                  <p className="text-[#9DC0E8] text-xs font-bold uppercase tracking-widest mb-5">
+                    {FIRM.name}
                   </p>
                   <div className="space-y-5">
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                        <span className="material-symbols-outlined text-[#C9A84C] text-lg">location_on</span>
+                        <span className="material-symbols-outlined text-[#9DC0E8] text-lg">location_on</span>
                       </div>
                       <div>
                         <p className="font-bold text-sm mb-0.5">Office Address</p>
@@ -84,7 +70,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                        <span className="material-symbols-outlined text-[#C9A84C] text-lg">call</span>
+                        <span className="material-symbols-outlined text-[#9DC0E8] text-lg">call</span>
                       </div>
                       <div>
                         <p className="font-bold text-sm mb-0.5">Phone</p>
@@ -96,7 +82,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                        <span className="material-symbols-outlined text-[#C9A84C] text-lg">mail</span>
+                        <span className="material-symbols-outlined text-[#9DC0E8] text-lg">mail</span>
                       </div>
                       <div>
                         <p className="font-bold text-sm mb-0.5">Email</p>
@@ -108,7 +94,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                        <span className="material-symbols-outlined text-[#C9A84C] text-lg">schedule</span>
+                        <span className="material-symbols-outlined text-[#9DC0E8] text-lg">schedule</span>
                       </div>
                       <div>
                         <p className="font-bold text-sm mb-0.5">Office Hours</p>
@@ -121,7 +107,7 @@ export default function ContactPage() {
 
               {/* 3 action buttons */}
               <div className="space-y-3">
-                <p className="text-xs font-bold uppercase tracking-widest text-[#41474F]/60 mb-4">
+                <p className="text-xs font-bold uppercase tracking-widest text-[#5B6676]/60 mb-4">
                   Quick Connect
                 </p>
 
@@ -130,16 +116,16 @@ export default function ContactPage() {
                   href={FIRM.calcom}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 w-full p-5 bg-[#0A1628] text-white rounded-xl hover:bg-[#1A2E4A] transition-colors group"
+                  className="flex items-center gap-4 w-full p-5 bg-[#1B3C6E] text-white rounded-xl hover:bg-[#21477F] transition-colors group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-[#C9A84C]/15 flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined text-[#C9A84C] text-xl">calendar_month</span>
+                  <div className="w-11 h-11 rounded-xl bg-[#2563B0]/15 flex items-center justify-center shrink-0">
+                    <span className="material-symbols-outlined text-[#9DC0E8] text-xl">calendar_month</span>
                   </div>
                   <div className="flex-1">
                     <p className="font-bold text-sm">Schedule a Call</p>
                     <p className="text-white/55 text-xs">Book a slot directly on cal.com</p>
                   </div>
-                  <span className="material-symbols-outlined text-white/40 group-hover:text-[#C9A84C] group-hover:translate-x-0.5 transition-all">
+                  <span className="material-symbols-outlined text-white/40 group-hover:text-[#9DC0E8] group-hover:translate-x-0.5 transition-all">
                     open_in_new
                   </span>
                 </a>
@@ -149,7 +135,7 @@ export default function ContactPage() {
                   href={`https://wa.me/${FIRM.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 w-full p-5 bg-[#F2F1EE] rounded-xl hover:bg-[#ECEAE6] transition-colors group"
+                  className="flex items-center gap-4 w-full p-5 bg-[#EEF2F8] rounded-xl hover:bg-[#E4EAF3] transition-colors group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
                     <svg viewBox="0 0 24 24" fill="#25D366" className="w-5 h-5">
@@ -157,10 +143,10 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <p className="font-bold text-sm text-[#0A1628]">Chat on WhatsApp</p>
-                    <p className="text-[#41474F]/60 text-xs">Usually replies within the hour</p>
+                    <p className="font-bold text-sm text-[#1B3C6E]">Chat on WhatsApp</p>
+                    <p className="text-[#5B6676]/60 text-xs">Usually replies within the hour</p>
                   </div>
-                  <span className="material-symbols-outlined text-[#41474F]/40 group-hover:text-[#25D366] group-hover:translate-x-0.5 transition-all">
+                  <span className="material-symbols-outlined text-[#5B6676]/40 group-hover:text-[#25D366] group-hover:translate-x-0.5 transition-all">
                     open_in_new
                   </span>
                 </a>
@@ -168,24 +154,24 @@ export default function ContactPage() {
                 {/* Email */}
                 <a
                   href={`mailto:${FIRM.email}?subject=Enquiry from Website`}
-                  className="flex items-center gap-4 w-full p-5 bg-[#F2F1EE] rounded-xl hover:bg-[#ECEAE6] transition-colors group"
+                  className="flex items-center gap-4 w-full p-5 bg-[#EEF2F8] rounded-xl hover:bg-[#E4EAF3] transition-colors group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-[#C9A84C]/10 flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined text-[#C9A84C] text-xl">mail</span>
+                  <div className="w-11 h-11 rounded-xl bg-[#2563B0]/10 flex items-center justify-center shrink-0">
+                    <span className="material-symbols-outlined text-[#2563B0] text-xl">mail</span>
                   </div>
                   <div className="flex-1">
-                    <p className="font-bold text-sm text-[#0A1628]">Send an Email</p>
-                    <p className="text-[#41474F]/60 text-xs">{FIRM.email}</p>
+                    <p className="font-bold text-sm text-[#1B3C6E]">Send an Email</p>
+                    <p className="text-[#5B6676]/60 text-xs">{FIRM.email}</p>
                   </div>
-                  <span className="material-symbols-outlined text-[#41474F]/40 group-hover:text-[#C9A84C] group-hover:translate-x-0.5 transition-all">
+                  <span className="material-symbols-outlined text-[#5B6676]/40 group-hover:text-[#2563B0] group-hover:translate-x-0.5 transition-all">
                     open_in_new
                   </span>
                 </a>
               </div>
 
               {/* Map placeholder */}
-              <div className="rounded-2xl overflow-hidden bg-[#ECEAE6] h-48 flex items-center justify-center relative">
-                <div className="text-center text-[#41474F]/40">
+              <div className="rounded-2xl overflow-hidden bg-[#E4EAF3] h-48 flex items-center justify-center relative">
+                <div className="text-center text-[#5B6676]/40">
                   <span className="material-symbols-outlined text-4xl mb-2 block">map</span>
                   <p className="text-xs font-medium">
                     {/* Replace with real Google Maps embed once address is confirmed */}
@@ -194,7 +180,7 @@ export default function ContactPage() {
                 </div>
                 {/* Pulse dot */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-4 h-4 rounded-full gold-gradient shadow-lg animate-pulse" />
+                  <div className="w-4 h-4 rounded-full bg-[#2563B0] shadow-lg animate-pulse" />
                 </div>
               </div>
             </div>
@@ -202,10 +188,10 @@ export default function ContactPage() {
             {/* ── RIGHT: Inquiry form ── */}
             <div className="lg:col-span-7 bg-white rounded-2xl shadow-sm p-8 md:p-12">
               <div className="mb-8">
-                <h2 className="text-3xl font-extrabold tracking-tight text-[#0A1628] mb-2">
+                <h2 className="text-3xl font-extrabold tracking-tight text-[#1B3C6E] mb-2">
                   Send an Enquiry
                 </h2>
-                <p className="text-[#41474F] text-sm">
+                <p className="text-[#5B6676] text-sm">
                   Fill in the form and we&apos;ll get back to you within 24 hours.
                 </p>
               </div>
@@ -218,26 +204,26 @@ export default function ContactPage() {
       {/* ════════════════════════════════════════════════════════════
           FAQ
       ════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-[#F2F1EE]">
+      <section className="py-24 bg-[#EEF2F8]">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10">
           <div className="bg-white rounded-2xl p-10 md:p-16">
             <div className="text-center mb-14">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#C9A84C] mb-3">FAQ</p>
-              <h2 className="text-4xl font-extrabold tracking-tight text-[#0A1628]">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#2563B0] mb-3">FAQ</p>
+              <h2 className="text-4xl font-extrabold tracking-tight text-[#1B3C6E]">
                 Common Questions
               </h2>
-              <p className="text-[#41474F] mt-3">Everything you need to know before reaching out.</p>
+              <p className="text-[#5B6676] mt-3">Everything you need to know before reaching out.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {FAQS.map(({ q, a }) => (
                 <div key={q}>
                   <div className="flex items-start gap-3 mb-3">
-                    <span className="w-6 h-6 rounded-full gold-gradient flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="material-symbols-outlined text-[#1A1200] text-xs">question_mark</span>
+                    <span className="w-6 h-6 rounded-full bg-[#2563B0] flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="material-symbols-outlined text-[#FFFFFF] text-xs">question_mark</span>
                     </span>
-                    <h3 className="font-bold text-lg text-[#0A1628] leading-snug">{q}</h3>
+                    <h3 className="font-bold text-lg text-[#1B3C6E] leading-snug">{q}</h3>
                   </div>
-                  <p className="text-[#41474F] text-sm leading-relaxed pl-9">{a}</p>
+                  <p className="text-[#5B6676] text-sm leading-relaxed pl-9">{a}</p>
                 </div>
               ))}
             </div>

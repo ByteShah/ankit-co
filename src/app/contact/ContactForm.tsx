@@ -36,22 +36,22 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-[#F2F1EE] border border-transparent rounded-lg px-4 py-3.5 text-sm text-[#0A1628] placeholder:text-[#41474F]/60 outline-none focus:border-[#C9A84C]/50 focus:bg-white transition-all";
-  const labelClass = "block text-[10px] font-bold text-[#41474F]/70 uppercase tracking-widest mb-1.5";
+    "w-full bg-[#EEF2F8] border border-transparent rounded-lg px-4 py-3.5 text-sm text-[#1B3C6E] placeholder:text-[#5B6676]/60 outline-none focus:border-[#2563B0]/50 focus:bg-white transition-all";
+  const labelClass = "block text-[10px] font-bold text-[#5B6676]/70 uppercase tracking-widest mb-1.5";
 
   if (status === "success") {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center gap-4">
-        <div className="w-16 h-16 rounded-full gold-gradient flex items-center justify-center shadow-lg">
-          <span className="material-symbols-outlined text-[#1A1200] text-3xl">check</span>
+        <div className="w-16 h-16 rounded-full bg-[#2563B0] flex items-center justify-center shadow-lg">
+          <span className="material-symbols-outlined text-[#FFFFFF] text-3xl">check</span>
         </div>
-        <h3 className="text-2xl font-bold text-[#0A1628]">Message Received!</h3>
-        <p className="text-[#41474F] max-w-xs">
+        <h3 className="text-2xl font-bold text-[#1B3C6E]">Message Received!</h3>
+        <p className="text-[#5B6676] max-w-xs">
           Thank you for reaching out. CA Ankit Shah or a team member will respond within 24 hours.
         </p>
         <button
           onClick={() => { setStatus("idle"); setForm({ name: "", company: "", email: "", phone: "", service: "", message: "" }); }}
-          className="mt-2 text-[#C9A84C] font-bold text-sm hover:underline"
+          className="mt-2 text-[#2563B0] font-bold text-sm hover:underline"
         >
           Send another message
         </button>
@@ -109,7 +109,7 @@ export default function ContactForm() {
       )}
 
       <button type="submit" disabled={status === "loading"}
-        className="w-full py-4 gold-gradient text-[#1A1200] rounded-lg font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-opacity shadow-md flex items-center justify-center gap-2 disabled:opacity-60">
+        className="w-full py-4 bg-[#2563B0] text-[#FFFFFF] rounded-lg font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-opacity shadow-md flex items-center justify-center gap-2 disabled:opacity-60">
         {status === "loading" ? (
           <>
             <span className="material-symbols-outlined text-sm animate-spin">progress_activity</span>

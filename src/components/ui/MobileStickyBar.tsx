@@ -13,10 +13,10 @@ export default function MobileStickyBar() {
 
   return (
     // md:hidden — only shows on mobile screens
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t border-[rgba(10,22,40,0.1)] bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t border-[rgba(27,60,110,0.1)] bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
       <a
         href={`tel:${FIRM.phone}`}
-        className="flex-1 flex items-center justify-center gap-2 py-4 text-[#0A1628] font-bold text-sm border-r border-[rgba(10,22,40,0.08)]"
+        className="flex-1 flex items-center justify-center gap-2 py-4 text-[#1B3C6E] font-bold text-sm border-r border-[rgba(27,60,110,0.08)]"
       >
         <span className="material-symbols-outlined text-lg">call</span>
         Call Now
@@ -25,7 +25,7 @@ export default function MobileStickyBar() {
         href={`https://wa.me/${FIRM.whatsapp}?text=${msg}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 flex items-center justify-center gap-2 py-4 bg-[#0A1628] text-white font-bold text-sm"
+        className="flex-1 flex items-center justify-center gap-2 py-4 bg-[#1B3C6E] text-white font-bold text-sm"
       >
         {WA_ICON}
         WhatsApp

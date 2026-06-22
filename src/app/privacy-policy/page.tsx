@@ -40,23 +40,23 @@ export default function PrivacyPolicyPage() {
   ];
 
   return (
-    <section className="pt-32 pb-24 bg-[#FAFAF8]">
+    <section className="pt-32 pb-24 bg-[#F7F9FC]">
       <div className="max-w-3xl mx-auto px-6 md:px-10">
-        <span className="inline-block px-3 py-1.5 bg-[#C9A84C]/10 text-[#A07C28] text-[10px] font-bold tracking-widest uppercase rounded-full mb-6">
+        <span className="inline-block px-3 py-1.5 bg-[#2563B0]/10 text-[#2563B0] text-[10px] font-bold tracking-widest uppercase rounded-full mb-6">
           Legal
         </span>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#0A1628] tracking-tight mb-3">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-[#1B3C6E] tracking-tight mb-3">
           Privacy Policy
         </h1>
-        <p className="text-[#41474F] mb-10">
+        <p className="text-[#5B6676] mb-10">
           Last updated: {new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
         </p>
 
         <div className="space-y-10">
           {sections.map(({ title, body }) => (
             <div key={title}>
-              <h2 className="text-xl font-bold text-[#0A1628] mb-3">{title}</h2>
-              <p className="text-[#41474F] leading-relaxed">{body}</p>
+              <h2 className="text-xl font-bold text-[#1B3C6E] mb-3">{title}</h2>
+              <p className="text-[#5B6676] leading-relaxed">{body}</p>
             </div>
           ))}
         </div>

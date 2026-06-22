@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { INDUSTRIES, FIRM } from "@/lib/constants";
+import PageBanner from "@/components/ui/PageBanner";
 
 export const metadata: Metadata = {
   alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ankitshahco.com'}/industries` },
@@ -26,45 +27,17 @@ const NAVY_CARDS = new Set(["Startups & Technology", "BFSI"]);
 export default function IndustriesPage() {
   return (
     <>
-      {/* ════════════════════════════════════════════════════════════
-          HERO
-      ════════════════════════════════════════════════════════════ */}
-      <section className="pt-32 pb-16 bg-[#FAFAF8]">
-        <div className="max-w-screen-xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
-            {/* Left copy */}
-            <div className="md:col-span-8">
-              <span className="inline-block text-[#C9A84C] text-xs font-bold tracking-[0.2em] uppercase mb-5">
-                Our Verticals
-              </span>
-              <h1
-                className="font-extrabold text-[#0A1628] mb-6"
-                style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
-              >
-                Specialised Expertise
-                <br />
-                Across <span className="text-gold-gradient">Indian Sectors.</span>
-              </h1>
-              <p className="text-[#41474F] text-xl max-w-2xl leading-relaxed">
-                We don&apos;t just balance books — we architect financial frameworks
-                tailored to the unique complexities of your industry.
-                Precision-led advisory for high-growth Indian markets.
-              </p>
-            </div>
-            {/* Right — gold orb */}
-            <div className="md:col-span-4 flex justify-end">
-              <div className="w-20 h-20 md:w-24 md:h-24 gold-gradient rounded-full flex items-center justify-center shadow-lg">
-                <span className="material-symbols-outlined text-[#1A1200] text-4xl">account_balance</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        breadcrumb="Industries"
+        title="Industries We Serve"
+        subtitle="Specialised audit, tax and compliance advisory tailored to the regulatory needs of each sector we work with across India."
+        image="/images/industries.jpg"
+      />
 
       {/* ════════════════════════════════════════════════════════════
           BENTO GRID
       ════════════════════════════════════════════════════════════ */}
-      <section className="pb-24 bg-[#FAFAF8]">
+      <section className="pt-12 md:pt-16 pb-24 bg-[#F7F9FC]">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10">
           {/*
             Layout pattern (12-col):
@@ -90,7 +63,7 @@ export default function IndustriesPage() {
                   key={ind.title}
                   className={`p-8 rounded-2xl group hover:-translate-y-1 transition-all duration-300 relative overflow-hidden ${
                     isNavy
-                      ? "navy-gradient text-white shadow-xl"
+                      ? "blue-gradient text-white shadow-xl"
                       : "bg-white shadow-sm hover:shadow-xl"
                   }`}
                 >
@@ -104,12 +77,12 @@ export default function IndustriesPage() {
                   <div className="relative z-10">
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${
-                        isNavy ? "bg-white/10" : "bg-[#0A1628]/5"
+                        isNavy ? "bg-white/10" : "bg-[#1B3C6E]/5"
                       }`}
                     >
                       <span
                         className={`material-symbols-outlined text-2xl ${
-                          isNavy ? "text-[#C9A84C]" : "text-[#0A1628]"
+                          isNavy ? "text-[#9DC0E8]" : "text-[#1B3C6E]"
                         }`}
                       >
                         {ind.icon}
@@ -117,33 +90,33 @@ export default function IndustriesPage() {
                     </div>
                     <h3
                       className={`text-xl font-bold mb-3 ${
-                        isNavy ? "text-white" : "text-[#0A1628]"
+                        isNavy ? "text-white" : "text-[#1B3C6E]"
                       }`}
                     >
                       {ind.title}
                     </h3>
                     <p
                       className={`text-sm leading-relaxed mb-6 ${
-                        isNavy ? "text-white/75" : "text-[#41474F]"
+                        isNavy ? "text-white/75" : "text-[#5B6676]"
                       }`}
                     >
                       {ind.desc}
                     </p>
                     <div
                       className={`pt-5 border-t ${
-                        isNavy ? "border-white/15" : "border-[rgba(10,22,40,0.07)]"
+                        isNavy ? "border-white/15" : "border-[rgba(27,60,110,0.07)]"
                       }`}
                     >
                       <p
                         className={`text-[10px] font-bold tracking-widest uppercase mb-1.5 ${
-                          isNavy ? "text-[#C9A84C]" : "text-[#C9A84C]"
+                          isNavy ? "text-[#9DC0E8]" : "text-[#2563B0]"
                         }`}
                       >
                         Success Highlight
                       </p>
                       <p
                         className={`text-xs italic leading-relaxed ${
-                          isNavy ? "text-white/70" : "text-[#41474F]"
+                          isNavy ? "text-white/70" : "text-[#5B6676]"
                         }`}
                       >
                         {s.story}
@@ -160,25 +133,25 @@ export default function IndustriesPage() {
               return (
                 <div
                   key={ind.title}
-                  className="lg:col-span-2 bg-[#F2F1EE] p-8 md:p-10 rounded-2xl flex flex-col md:flex-row gap-8 items-start hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
+                  className="lg:col-span-2 bg-[#EEF2F8] p-8 md:p-10 rounded-2xl flex flex-col md:flex-row gap-8 items-start hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
                 >
                   {/* Main content */}
                   <div className="flex-1">
-                    <div className="w-12 h-12 bg-[#0A1628]/5 rounded-xl flex items-center justify-center mb-6 text-[#0A1628]">
+                    <div className="w-12 h-12 bg-[#1B3C6E]/5 rounded-xl flex items-center justify-center mb-6 text-[#1B3C6E]">
                       <span className="material-symbols-outlined text-2xl">{ind.icon}</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-[#0A1628] mb-3">{ind.title}</h3>
-                    <p className="text-[#41474F] text-sm leading-relaxed mb-6">{ind.desc}</p>
-                    <div className="pt-5 border-t border-[rgba(10,22,40,0.08)]">
-                      <p className="text-[10px] font-bold tracking-widest uppercase text-[#C9A84C] mb-1.5">
+                    <h3 className="text-2xl font-bold text-[#1B3C6E] mb-3">{ind.title}</h3>
+                    <p className="text-[#5B6676] text-sm leading-relaxed mb-6">{ind.desc}</p>
+                    <div className="pt-5 border-t border-[rgba(27,60,110,0.08)]">
+                      <p className="text-[10px] font-bold tracking-widest uppercase text-[#2563B0] mb-1.5">
                         Success Highlight
                       </p>
-                      <p className="text-xs italic text-[#41474F] leading-relaxed">{s.story}</p>
+                      <p className="text-xs italic text-[#5B6676] leading-relaxed">{s.story}</p>
                     </div>
                   </div>
                   {/* Stat panel */}
-                  <div className="shrink-0 navy-gradient rounded-xl p-6 text-center min-w-[120px] self-stretch flex flex-col items-center justify-center">
-                    <div className="text-3xl font-extrabold text-[#C9A84C] mb-1">{s.stat}</div>
+                  <div className="shrink-0 blue-gradient rounded-xl p-6 text-center min-w-[120px] self-stretch flex flex-col items-center justify-center">
+                    <div className="text-3xl font-extrabold text-[#9DC0E8] mb-1">{s.stat}</div>
                     <div className="text-[9px] font-bold text-white/60 uppercase tracking-widest">
                       Key Result
                     </div>
@@ -193,18 +166,18 @@ export default function IndustriesPage() {
       {/* ════════════════════════════════════════════════════════════
           INDUSTRIES COUNT STRIP
       ════════════════════════════════════════════════════════════ */}
-      <section className="py-16 bg-[#F2F1EE]">
+      <section className="py-16 bg-[#EEF2F8]">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { value: "8+",    label: "Industries Served" },
-              { value: "500+",  label: "Active Clients" },
-              { value: "₹50Cr+",label: "Tax Savings Delivered" },
-              { value: `${new Date().getFullYear() - FIRM.foundedYear}+`, label: "Years of Expertise" },
+              { value: "4",     label: "Practice Areas" },
+              { value: "ICAI",  label: "Registered Firm" },
+              { value: `${new Date().getFullYear() - FIRM.foundedYear}+`, label: "Years of Practice" },
             ].map(({ value, label }) => (
               <div key={label}>
-                <div className="text-3xl md:text-4xl font-extrabold text-[#C9A84C] mb-1">{value}</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-[#41474F]">{label}</div>
+                <div className="text-3xl md:text-4xl font-extrabold text-[#2563B0] mb-1">{value}</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-[#5B6676]">{label}</div>
               </div>
             ))}
           </div>
@@ -214,28 +187,28 @@ export default function IndustriesPage() {
       {/* ════════════════════════════════════════════════════════════
           CTA
       ════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-[#FAFAF8]">
+      <section className="py-24 bg-[#F7F9FC]">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#C9A84C] mb-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#2563B0] mb-4">
             Your Industry. Our Expertise.
           </p>
-          <h2 className="text-4xl font-extrabold text-[#0A1628] tracking-tight mb-5">
+          <h2 className="text-4xl font-extrabold text-[#1B3C6E] tracking-tight mb-5">
             Ready to Scale Your Industry Impact?
           </h2>
-          <p className="text-[#41474F] text-lg max-w-xl mx-auto mb-10">
+          <p className="text-[#5B6676] text-lg max-w-xl mx-auto mb-10">
             Connect with a specialist who speaks your language and understands
             your unique market pressures — no generic advice, ever.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="gold-gradient text-[#1A1200] px-10 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-opacity"
+              className="bg-[#2563B0] text-[#FFFFFF] px-10 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-opacity"
             >
               Speak to a Specialist
             </Link>
             <Link
               href="/services"
-              className="border border-[rgba(10,22,40,0.15)] text-[#0A1628] px-10 py-4 rounded-lg font-bold text-lg hover:bg-[#F2F1EE] transition-colors"
+              className="border border-[rgba(27,60,110,0.15)] text-[#1B3C6E] px-10 py-4 rounded-lg font-bold text-lg hover:bg-[#EEF2F8] transition-colors"
             >
               View All Services
             </Link>

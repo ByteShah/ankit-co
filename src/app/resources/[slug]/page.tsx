@@ -44,16 +44,16 @@ export default async function ArticlePage(
   const related = getRelatedArticles(article);
 
   return (
-    <div className="bg-[#FAFAF8] min-h-screen">
+    <div className="bg-[#F7F9FC] min-h-screen">
       {/* ── Breadcrumb ── */}
-      <div className="bg-[#F2F1EE] border-b border-[rgba(10,22,40,0.06)] pt-24 pb-4">
+      <div className="bg-[#EEF2F8] border-b border-[rgba(27,60,110,0.06)] pt-24 pb-4">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10">
-          <nav className="flex items-center gap-2 text-xs text-[#41474F]">
-            <Link href="/" className="hover:text-[#0A1628] transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-xs text-[#5B6676]">
+            <Link href="/" className="hover:text-[#1B3C6E] transition-colors">Home</Link>
             <span className="material-symbols-outlined text-sm">chevron_right</span>
-            <Link href="/resources" className="hover:text-[#0A1628] transition-colors">Resources</Link>
+            <Link href="/resources" className="hover:text-[#1B3C6E] transition-colors">Resources</Link>
             <span className="material-symbols-outlined text-sm">chevron_right</span>
-            <span className="text-[#0A1628] font-medium truncate max-w-[200px]">{article.title}</span>
+            <span className="text-[#1B3C6E] font-medium truncate max-w-[200px]">{article.title}</span>
           </nav>
         </div>
       </div>
@@ -66,17 +66,17 @@ export default async function ArticlePage(
             <span
               className={`inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-sm mb-5 ${
                 article.tagColor === "gold"
-                  ? "bg-[#C9A84C] text-[#1A1200]"
-                  : "bg-[#0A1628] text-white"
+                  ? "bg-[#2563B0] text-[#FFFFFF]"
+                  : "bg-[#1B3C6E] text-white"
               }`}
             >
               {article.tag}
             </span>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-[#0A1628] leading-tight tracking-tight mb-4">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-[#1B3C6E] leading-tight tracking-tight mb-4">
               {article.title}
             </h1>
-            <p className="text-lg text-[#41474F] leading-relaxed mb-6">{article.desc}</p>
-            <div className="flex flex-wrap items-center gap-4 text-xs text-[#41474F]/70 border-t border-[rgba(10,22,40,0.08)] pt-5">
+            <p className="text-lg text-[#5B6676] leading-relaxed mb-6">{article.desc}</p>
+            <div className="flex flex-wrap items-center gap-4 text-xs text-[#5B6676]/70 border-t border-[rgba(27,60,110,0.08)] pt-5">
               <span className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-sm">calendar_today</span>
                 {article.date}
@@ -97,16 +97,16 @@ export default async function ArticlePage(
             {article.sections.map((section, i) => (
               <section key={i}>
                 {section.heading && (
-                  <h2 className="text-xl font-bold text-[#0A1628] mb-4 pb-2 border-b-2 border-[#C9A84C]/30">
+                  <h2 className="text-xl font-bold text-[#1B3C6E] mb-4 pb-2 border-b-2 border-[#2563B0]/30">
                     {section.heading}
                   </h2>
                 )}
-                <p className="text-[#41474F] leading-[1.8] text-base">{section.body}</p>
+                <p className="text-[#5B6676] leading-[1.8] text-base">{section.body}</p>
                 {section.bullets && section.bullets.length > 0 && (
                   <ul className="mt-4 space-y-2.5">
                     {section.bullets.map((b, j) => (
-                      <li key={j} className="flex items-start gap-3 text-[#41474F] text-sm leading-relaxed">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A84C] shrink-0" />
+                      <li key={j} className="flex items-start gap-3 text-[#5B6676] text-sm leading-relaxed">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#2563B0] shrink-0" />
                         {b}
                       </li>
                     ))}
@@ -117,16 +117,16 @@ export default async function ArticlePage(
           </div>
 
           {/* Primary source attribution */}
-          <div className="mt-12 p-6 bg-[#F2F1EE] rounded-xl border border-[rgba(10,22,40,0.08)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="mt-12 p-6 bg-[#EEF2F8] rounded-xl border border-[rgba(27,60,110,0.08)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-[#41474F]/60 mb-1">Primary Source</p>
-              <p className="text-sm font-semibold text-[#0A1628]">{article.sourceName}</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-[#5B6676]/60 mb-1">Primary Source</p>
+              <p className="text-sm font-semibold text-[#1B3C6E]">{article.sourceName}</p>
             </div>
             <a
               href={article.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[rgba(10,22,40,0.15)] rounded-lg text-xs font-bold text-[#0A1628] hover:bg-[#0A1628] hover:text-white transition-all whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[rgba(27,60,110,0.15)] rounded-lg text-xs font-bold text-[#1B3C6E] hover:bg-[#1B3C6E] hover:text-white transition-all whitespace-nowrap"
             >
               Visit Official Source
               <span className="material-symbols-outlined text-sm">open_in_new</span>
@@ -134,12 +134,12 @@ export default async function ArticlePage(
           </div>
 
           {/* CTA */}
-          <div className="mt-12 navy-gradient rounded-2xl p-8 md:p-10 relative overflow-hidden">
+          <div className="mt-12 blue-gradient rounded-2xl p-8 md:p-10 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-6 text-white/5 pointer-events-none">
               <span className="material-symbols-outlined text-[120px]">handshake</span>
             </div>
             <div className="relative z-10 max-w-lg">
-              <p className="text-[#C9A84C] text-xs font-bold uppercase tracking-widest mb-2">Need expert help?</p>
+              <p className="text-[#9DC0E8] text-xs font-bold uppercase tracking-widest mb-2">Need expert help?</p>
               <h3 className="text-2xl font-extrabold text-white tracking-tight mb-3">
                 Let us handle the complexity for you.
               </h3>
@@ -149,7 +149,7 @@ export default async function ArticlePage(
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact"
-                  className="gold-gradient text-[#1A1200] px-6 py-3 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity text-center"
+                  className="bg-[#2563B0] text-[#FFFFFF] px-6 py-3 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity text-center"
                 >
                   Book Free Consultation
                 </Link>
@@ -171,21 +171,21 @@ export default async function ArticlePage(
           {/* Related articles */}
           {related.length > 0 && (
             <div>
-              <h3 className="text-xs font-bold uppercase tracking-widest text-[#41474F]/60 mb-5">Related Reads</h3>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-[#5B6676]/60 mb-5">Related Reads</h3>
               <div className="space-y-4">
                 {related.map((rel) => (
                   <Link
                     key={rel.slug}
                     href={`/resources/${rel.slug}`}
-                    className="group block bg-white p-5 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all border-l-4 border-[#C9A84C]"
+                    className="group block bg-white p-5 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all border-l-4 border-[#2563B0]"
                   >
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#41474F]/50">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#5B6676]/50">
                       {rel.tag}
                     </span>
-                    <h4 className="text-sm font-bold text-[#0A1628] mt-1.5 leading-snug group-hover:text-[#C9A84C] transition-colors">
+                    <h4 className="text-sm font-bold text-[#1B3C6E] mt-1.5 leading-snug group-hover:text-[#2563B0] transition-colors">
                       {rel.title}
                     </h4>
-                    <p className="text-xs text-[#41474F]/70 mt-1">{rel.date} · {rel.readTime}</p>
+                    <p className="text-xs text-[#5B6676]/70 mt-1">{rel.date} · {rel.readTime}</p>
                   </Link>
                 ))}
               </div>
@@ -193,15 +193,15 @@ export default async function ArticlePage(
           )}
 
           {/* Quick contact card */}
-          <div className="bg-[#0A1628] rounded-xl p-6 text-white">
-            <span className="material-symbols-outlined text-[#C9A84C] text-2xl mb-3 block">support_agent</span>
+          <div className="bg-[#1B3C6E] rounded-xl p-6 text-white">
+            <span className="material-symbols-outlined text-[#9DC0E8] text-2xl mb-3 block">support_agent</span>
             <h4 className="font-bold text-base mb-2">Have a question?</h4>
             <p className="text-white/60 text-xs leading-relaxed mb-4">
               Our experts are available Mon–Sat, 9 AM to 7 PM IST.
             </p>
             <Link
               href="/contact"
-              className="block text-center gold-gradient text-[#1A1200] text-xs font-bold py-2.5 rounded-lg hover:opacity-90 transition-opacity"
+              className="block text-center bg-[#2563B0] text-[#FFFFFF] text-xs font-bold py-2.5 rounded-lg hover:opacity-90 transition-opacity"
             >
               Send an Enquiry
             </Link>
@@ -210,7 +210,7 @@ export default async function ArticlePage(
           {/* Back to resources */}
           <Link
             href="/resources"
-            className="flex items-center gap-2 text-sm font-bold text-[#41474F] hover:text-[#0A1628] transition-colors"
+            className="flex items-center gap-2 text-sm font-bold text-[#5B6676] hover:text-[#1B3C6E] transition-colors"
           >
             <span className="material-symbols-outlined text-lg">arrow_back</span>
             Back to Knowledge Hub

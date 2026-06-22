@@ -92,7 +92,7 @@ export default function LeadMagnetPopup() {
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-[#0A1628]/70 backdrop-blur-sm"
+        className="absolute inset-0 bg-[#1B3C6E]/70 backdrop-blur-sm"
         onClick={close}
         aria-hidden="true"
       />
@@ -100,13 +100,13 @@ export default function LeadMagnetPopup() {
       {/* Modal */}
       <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Gold top bar */}
-        <div className="h-1 gold-gradient w-full" />
+        <div className="h-1 bg-[#2563B0] w-full" />
 
         {/* Close button */}
         <button
           onClick={close}
           aria-label="Close"
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#F2F1EE] flex items-center justify-center text-[#41474F] hover:bg-[#0A1628] hover:text-white transition-colors z-10"
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#EEF2F8] flex items-center justify-center text-[#5B6676] hover:bg-[#1B3C6E] hover:text-white transition-colors z-10"
         >
           <span className="material-symbols-outlined text-lg">close</span>
         </button>
@@ -114,14 +114,14 @@ export default function LeadMagnetPopup() {
         <div className="p-8">
           {status === "success" ? (
             <div className="text-center py-6">
-              <span className="material-symbols-outlined text-5xl text-[#C9A84C] mb-4 block">check_circle</span>
-              <h3 className="text-xl font-extrabold text-[#0A1628] mb-2">You&apos;re all set!</h3>
-              <p className="text-[#41474F] text-sm leading-relaxed">
+              <span className="material-symbols-outlined text-5xl text-[#2563B0] mb-4 block">check_circle</span>
+              <h3 className="text-xl font-extrabold text-[#1B3C6E] mb-2">You&apos;re all set!</h3>
+              <p className="text-[#5B6676] text-sm leading-relaxed">
                 We&apos;ll send the GST Compliance Checklist to <strong>{email}</strong> within a few minutes.
               </p>
               <button
                 onClick={close}
-                className="mt-6 px-6 py-2.5 navy-gradient text-white text-sm font-bold rounded-lg hover:opacity-90 transition-opacity"
+                className="mt-6 px-6 py-2.5 blue-gradient text-white text-sm font-bold rounded-lg hover:opacity-90 transition-opacity"
               >
                 Done
               </button>
@@ -130,20 +130,20 @@ export default function LeadMagnetPopup() {
             <>
               {/* Icon + headline */}
               <div className="flex items-center gap-4 mb-5">
-                <div className="w-14 h-14 navy-gradient rounded-2xl flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[#C9A84C] text-2xl">download</span>
+                <div className="w-14 h-14 blue-gradient rounded-2xl flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-[#2563B0] text-2xl">download</span>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-[#C9A84C] mb-0.5">Free Download</p>
-                  <h3 className="text-lg font-extrabold text-[#0A1628] leading-snug">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-[#2563B0] mb-0.5">Free Download</p>
+                  <h3 className="text-lg font-extrabold text-[#1B3C6E] leading-snug">
                     Before you go — grab our free checklist
                   </h3>
                 </div>
               </div>
 
-              <p className="text-[#41474F] text-sm leading-relaxed mb-5">
-                <strong className="text-[#0A1628]">GST Compliance Checklist 2024–25</strong> — a practical,
-                step-by-step checklist used by 500+ Indian businesses to stay audit-ready all year. Free.
+              <p className="text-[#5B6676] text-sm leading-relaxed mb-5">
+                <strong className="text-[#1B3C6E]">GST Compliance Checklist 2024–25</strong> — a practical,
+                step-by-step checklist to help your business stay audit-ready through the year. Free.
                 No strings attached.
               </p>
 
@@ -155,9 +155,9 @@ export default function LeadMagnetPopup() {
                   "Common audit triggers to avoid",
                   "MSME & e-invoicing compliance points",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-xs text-[#41474F]">
-                    <span className="w-4 h-4 rounded-full gold-gradient flex items-center justify-center shrink-0">
-                      <span className="material-symbols-outlined text-[10px] text-[#1A1200]">check</span>
+                  <li key={item} className="flex items-center gap-2.5 text-xs text-[#5B6676]">
+                    <span className="w-4 h-4 rounded-full bg-[#2563B0] flex items-center justify-center shrink-0">
+                      <span className="material-symbols-outlined text-[10px] text-[#FFFFFF]">check</span>
                     </span>
                     {item}
                   </li>
@@ -171,12 +171,12 @@ export default function LeadMagnetPopup() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 rounded-lg border border-[rgba(10,22,40,0.15)] text-sm text-[#0A1628] placeholder:text-[#41474F]/50 outline-none focus:border-[#C9A84C] transition-colors"
+                  className="flex-1 px-4 py-3 rounded-lg border border-[rgba(27,60,110,0.15)] text-sm text-[#1B3C6E] placeholder:text-[#5B6676]/50 outline-none focus:border-[#2563B0] transition-colors"
                 />
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="gold-gradient text-[#1A1200] px-6 py-3 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap"
+                  className="bg-[#2563B0] text-[#FFFFFF] px-6 py-3 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap"
                 >
                   {status === "loading" ? "Sending…" : "Send Me the Checklist"}
                 </button>
@@ -186,7 +186,7 @@ export default function LeadMagnetPopup() {
                 <p className="text-red-500 text-xs mt-3">Something went wrong. Please try again or email us directly.</p>
               )}
 
-              <p className="text-[10px] text-[#41474F]/50 mt-4 text-center">
+              <p className="text-[10px] text-[#5B6676]/50 mt-4 text-center">
                 Zero spam. Unsubscribe anytime. Your data is protected.
               </p>
             </>

@@ -74,15 +74,15 @@ export default function CookieBanner() {
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
-      <div className="bg-[#0A1628] rounded-2xl shadow-2xl overflow-hidden border border-[rgba(201,168,76,0.2)]">
-        {/* Top gold accent line */}
-        <div className="h-0.5 gold-gradient w-full" />
+      <div className="bg-[#1B3C6E] rounded-2xl shadow-2xl overflow-hidden border border-[rgba(37,99,176,0.2)]">
+        {/* Top accent line */}
+        <div className="h-0.5 bg-[#2563B0] w-full" />
 
         <div className="p-6">
           {/* Header */}
           <div className="flex items-start gap-3 mb-4">
-            <div className="w-9 h-9 rounded-xl gold-gradient flex items-center justify-center shrink-0">
-              <span className="material-symbols-outlined text-[#1A1200] text-base">cookie</span>
+            <div className="w-9 h-9 rounded-xl bg-[#2563B0] flex items-center justify-center shrink-0">
+              <span className="material-symbols-outlined text-[#FFFFFF] text-base">cookie</span>
             </div>
             <div>
               <h3 className="font-bold text-white text-sm">We use cookies</h3>
@@ -97,7 +97,7 @@ export default function CookieBanner() {
             We use essential cookies to make the site work, and optional analytics
             cookies (Google Analytics) to understand visitor behaviour — helping us
             improve our content and services.{" "}
-            <Link href="/privacy-policy" className="text-[#C9A84C] hover:underline">
+            <Link href="/privacy-policy" className="text-[#9DC0E8] hover:underline">
               Privacy Policy
             </Link>
           </p>
@@ -118,7 +118,7 @@ export default function CookieBanner() {
                     className={`shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full ${
                       always
                         ? "bg-white/10 text-white/50"
-                        : "bg-[#C9A84C]/20 text-[#C9A84C]"
+                        : "bg-[#2563B0]/30 text-[#9DC0E8]"
                     }`}
                   >
                     {always ? "Always on" : "Optional"}
@@ -130,7 +130,7 @@ export default function CookieBanner() {
 
           <button
             onClick={() => setShowDetails((s) => !s)}
-            className="text-[#C9A84C] text-xs font-bold hover:underline mb-5 flex items-center gap-1"
+            className="text-[#9DC0E8] text-xs font-bold hover:underline mb-5 flex items-center gap-1"
           >
             {showDetails ? "Hide" : "Cookie details"}
             <span className="material-symbols-outlined text-sm">
@@ -142,7 +142,7 @@ export default function CookieBanner() {
           <div className="flex gap-3">
             <button
               onClick={accept}
-              className="flex-1 gold-gradient text-[#1A1200] py-2.5 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity"
+              className="flex-1 bg-[#2563B0] text-[#FFFFFF] py-2.5 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity"
             >
               Accept All
             </button>

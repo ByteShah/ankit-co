@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
@@ -16,6 +16,13 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ankitshahco.com";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+// Serif display face — institutional gravitas for headings
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -68,19 +75,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable} h-full`}>
       <head>
-        {/* Material Symbols */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
-          rel="stylesheet"
-        />
+        {/* Material Symbols icon font is self-hosted via globals.css (@font-face) */}
         {/* JSON-LD Structured Data */}
         <JsonLd />
       </head>
-      <body className="min-h-full flex flex-col bg-[#FAFAF8] text-[#1A1C19] antialiased">
+      <body className="min-h-full flex flex-col bg-[#F7F9FC] text-[#1A2433] antialiased">
         <Clarity />
         <NavBar />
         {/* pb-[68px] on mobile to avoid content hidden behind sticky bar */}
