@@ -36,8 +36,6 @@ function SidebarBox({ title, children }: { title: string; children: React.ReactN
 }
 
 export default function HomePage() {
-  const yearsExp = new Date().getFullYear() - FIRM.foundedYear;
-
   return (
     <>
       {/* ════════════════════════════════════════════════════════════
@@ -182,10 +180,9 @@ export default function HomePage() {
                 {FIRM.name} is a firm of Chartered Accountants based in{" "}
                 {FIRM.address.city}, providing audit, taxation, corporate finance
                 and regulatory-compliance services to businesses, startups and
-                individuals across India. Established in {FIRM.foundedYear} and
-                registered with the Institute of Chartered Accountants of India
-                (ICAI), the firm brings over {yearsExp} years of professional
-                practice to every engagement.
+                individuals across India. Established in {FIRM.foundedYear}, the
+                firm is registered with the Institute of Chartered Accountants of
+                India (ICAI).
               </p>
               <p>
                 Our practice is partner-led — every assignment receives the direct

@@ -28,7 +28,7 @@ const ALL_SERVICES = [
 const METRICS = [
   { value: `${ALL_SERVICES.length}`, label: "Service Lines" },
   { value: "8+",    label: "Industries Served" },
-  { value: `${new Date().getFullYear() - FIRM.foundedYear}+`, label: "Years of Practice" },
+  { value: String(FIRM.foundedYear), label: "Established" },
   { value: "ICAI",  label: "Registered Firm" },
 ];
 
@@ -76,12 +76,11 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* First 3 cards — regular */}
-            {ALL_SERVICES.slice(0, 3).map((s) => (
+            {ALL_SERVICES.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="bg-white p-8 md:p-10 flex flex-col h-full group hover:shadow-2xl transition-all duration-300 rounded-xl"
+                className="bg-white p-8 md:p-10 flex flex-col h-full group hover:shadow-2xl transition-all duration-300 rounded-xl border border-[#E4EAF3]"
               >
                 <span className="material-symbols-outlined text-4xl text-[#1B3C6E] mb-6">
                   {s.icon}
@@ -98,63 +97,6 @@ export default function ServicesPage() {
                 </span>
               </a>
             ))}
-
-            {/* Corporate Finance — spans 2 cols */}
-            <a
-              href={`#${ALL_SERVICES[2].id}`}
-              className="hidden"
-              aria-hidden
-            />
-            <a
-              href="#corporate-finance"
-              className="bg-white p-8 md:p-10 flex flex-col h-full group hover:shadow-2xl transition-all duration-300 rounded-xl lg:col-span-2"
-            >
-              <div className="grid md:grid-cols-2 gap-8 items-start h-full">
-                <div className="flex flex-col h-full">
-                  <span className="material-symbols-outlined text-4xl text-[#1B3C6E] mb-6">
-                    {ALL_SERVICES[2].icon}
-                  </span>
-                  <h3 className="text-xl font-bold text-[#1B3C6E] mb-3">
-                    {ALL_SERVICES[2].title}
-                  </h3>
-                  <p className="text-[#5B6676] mb-8 flex-grow leading-relaxed text-sm">
-                    {ALL_SERVICES[2].shortDesc}
-                  </p>
-                  <span className="flex items-center text-[#2563B0] font-bold text-sm tracking-wide group-hover:gap-2 transition-all">
-                    LEARN MORE
-                    <span className="material-symbols-outlined ml-2 text-lg group-hover:translate-x-1 transition-transform">
-                      arrow_forward
-                    </span>
-                  </span>
-                </div>
-                {/* Visual panel */}
-                <div className="hidden md:flex items-center justify-center h-full blue-gradient rounded-xl p-8 text-white/10">
-                  <span className="material-symbols-outlined text-[120px]">trending_up</span>
-                </div>
-              </div>
-            </a>
-
-            {/* Secretarial */}
-            <a
-              href="#secretarial"
-              className="bg-white p-8 md:p-10 flex flex-col h-full group hover:shadow-2xl transition-all duration-300 rounded-xl"
-            >
-              <span className="material-symbols-outlined text-4xl text-[#1B3C6E] mb-6">
-                {ALL_SERVICES[4].icon}
-              </span>
-              <h3 className="text-xl font-bold text-[#1B3C6E] mb-3">
-                {ALL_SERVICES[4].title}
-              </h3>
-              <p className="text-[#5B6676] mb-8 flex-grow leading-relaxed text-sm">
-                {ALL_SERVICES[4].shortDesc}
-              </p>
-              <span className="flex items-center text-[#2563B0] font-bold text-sm tracking-wide group-hover:gap-2 transition-all">
-                LEARN MORE
-                <span className="material-symbols-outlined ml-2 text-lg group-hover:translate-x-1 transition-transform">
-                  arrow_forward
-                </span>
-              </span>
-            </a>
           </div>
         </div>
       </section>

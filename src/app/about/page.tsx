@@ -17,7 +17,6 @@ const VALUES = [
 ];
 
 export default function AboutPage() {
-  const yearsExp = new Date().getFullYear() - FIRM.foundedYear;
 
   return (
     <>
@@ -135,10 +134,9 @@ export default function AboutPage() {
               <div className="space-y-4 text-[#5B6676] leading-relaxed mb-8">
                 <p>
                   CA Ankit Shah is the founder and managing partner of{" "}
-                  {FIRM.name}. A Fellow Chartered Accountant with over{" "}
-                  {yearsExp} years of experience, Ankit has built a reputation
-                  for delivering partner-led, outcome-driven advisory across
-                  audit, taxation, and corporate finance.
+                  {FIRM.name}. A Fellow Chartered Accountant, Ankit has built a
+                  reputation for delivering partner-led, outcome-driven advisory
+                  across audit, taxation, and corporate finance.
                 </p>
                 <p>
                   His areas of specialisation include income tax planning,

@@ -173,7 +173,7 @@ export default function IndustriesPage() {
               { value: "8+",    label: "Industries Served" },
               { value: "4",     label: "Practice Areas" },
               { value: "ICAI",  label: "Registered Firm" },
-              { value: `${new Date().getFullYear() - FIRM.foundedYear}+`, label: "Years of Practice" },
+              { value: String(FIRM.foundedYear), label: "Established" },
             ].map(({ value, label }) => (
               <div key={label}>
                 <div className="text-3xl md:text-4xl font-extrabold text-[#2563B0] mb-1">{value}</div>
